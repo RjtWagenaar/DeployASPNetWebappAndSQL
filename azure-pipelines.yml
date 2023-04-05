@@ -44,8 +44,8 @@ stages:
 - stage: DeployAzureResources
   jobs: 
   - job: DeployAzureResources
-    pool: 
-      vmImage: 'SelfHosted'
+    pool: 'SelfHosted'
+      
     steps:
     - task: AzureCLI@2
       inputs:
