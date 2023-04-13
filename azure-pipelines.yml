@@ -3,6 +3,7 @@
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
+
 variables: 
 - group: AzureResourcesVariableGroup
 
@@ -45,7 +46,7 @@ stages:
 - stage: DeployAzureResources
   jobs: 
   - job: DeployAzureResources
-    pool: 'SelfHosted'
+    pool: 'IaaSVM'
       
     steps:
     - task: AzureCLI@2
@@ -69,7 +70,7 @@ stages:
 - stage: DeployASPNETApp
   jobs: 
   - job: DeployASPNETApp
-    pool: 'SelfHosted'
+    pool: 'IaaSVM'
     steps:
     - task: DownloadBuildArtifacts@1
       inputs:
