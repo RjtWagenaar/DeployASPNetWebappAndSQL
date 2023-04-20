@@ -46,7 +46,7 @@ stages:
 - stage: DeployAzureResources
   jobs: 
   - job: DeployAzureResources
-    pool: 'SelfHosted'
+    pool: 'IaaSVM'
       
     steps:
     - task: AzureCLI@2
