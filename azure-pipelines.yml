@@ -15,7 +15,7 @@ stages:
   jobs: 
   - job: Build
 
-    pool: 'IaasVM'
+    pool: 'Azure Pipelines'
 
 
     variables:
@@ -46,7 +46,7 @@ stages:
 - stage: DeployAzureResources
   jobs: 
   - job: DeployAzureResources
-    pool: 'IaasVM'
+    pool: 'Azure Pipelines'
       
     steps:
     - task: AzureCLI@2
@@ -70,7 +70,7 @@ stages:
 - stage: DeployASPNETApp
   jobs: 
   - job: DeployASPNETApp
-    pool: 'IaasVM'
+    pool: 'Azure Pipelines'
     steps:
     - task: DownloadBuildArtifacts@1
       inputs:
