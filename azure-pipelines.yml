@@ -15,7 +15,7 @@ stages:
   jobs: 
   - job: Build
 
-    pool: 'SelfHosted'
+    pool: 'IaasVM'
 
 
     variables:
