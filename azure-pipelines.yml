@@ -46,7 +46,7 @@ stages:
 - stage: DeployAzureResources
   jobs: 
   - job: DeployAzureResources
-    pool: 'SelfHosted'
+    pool: 'IaasVM'
       
     steps:
     - task: AzureCLI@2
@@ -70,7 +70,7 @@ stages:
 - stage: DeployASPNETApp
   jobs: 
   - job: DeployASPNETApp
-    pool: 'SelfHosted'
+    pool: 'IaasVM'
     steps:
     - task: DownloadBuildArtifacts@1
       inputs:
